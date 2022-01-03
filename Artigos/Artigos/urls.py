@@ -18,5 +18,7 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    # sinalizando o padrão de urls do app
+    path('artigos_app/', include('artigos_app.api.urls')),
     path('api-auth/', include('rest_framework.urls'))
 ]
