@@ -21,6 +21,13 @@
             dataType:'json',
             success:function(autores){
                 console.log(autores)
+                $.each(autores,function(){
+                    $('#autores').append("<li class='list-group-item'>"+this.nome+"</li>")
+                    $('#autores').append("<li class='list-group-item'>"+this.endereco+"</li>")
+                    $('#autores').append("<li class='list-group-item'>"+(this.site === null || this.site == ''?"Não informado":this.site)+"</li>")
+                    $('#autores').append("<li class='list-group-item'>"+this.email+"</li>")
+                    $('#autores').append('<br />')
+                })
             }
         })
 
