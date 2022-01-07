@@ -15,5 +15,4 @@ class AutorTestCase(TestCase):
         self.autor = mommy.make('Autor')
 
     def test_str(self):
-        self.assertEquals(str(self.autor), 
-            self.autor.nome + ' - ' + self.autor.email)
+        self.assertEquals(str(self.autor), self.autor.nome + ' - ' + self.autor.email)
