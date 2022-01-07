@@ -3,13 +3,13 @@ from django.db.models.fields import CharField, TextField
 
 # Create your models here.
 class Autor(models.Model):
-        nome = models.CharField(max_length=255)
-        endereco = models.CharField(max_length=255)
-        site = models.URLField(blank=True, null=True)
-        email = models.EmailField()
+    nome = models.CharField(max_length=255)
+    endereco = models.CharField(max_length=255)
+    site = models.URLField(blank=True, null=True)
+    email = models.EmailField()
 
-        def __str__(self):
-            return self.nome + ' - ' + self.email
+    def __str__(self):
+        return self.nome + ' - ' + self.email
 
 class Artigo(models.Model):
 
